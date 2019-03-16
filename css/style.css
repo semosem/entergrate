@@ -7822,10 +7822,14 @@ h1, h2, h3, h4, h5,
     /* Firefox 18- */
     color: rgba(255, 255, 255, 0.8); }
   .volunter-form .form-control:focus, .volunter-form .form-control:active {
-    border-color: #fff; }
+    border-color: #fff;}
+  /* .volunter-form input[role="button"] {
+    
+  } */
 
 .volunter-form textarea.form-control {
-  height: inherit !important; }
+  height: inherit !important;
+}
 
 .gallery {
   width: 25%;
