@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
-const transporter = require('./utils/transporter');
+const transporter = require('nodemailer');   //require('./utils/transporter');
 
 app.use("/js", express.static(__dirname + "/js"));
 app.use("/css", express.static(__dirname + "/css"));
