@@ -33,7 +33,7 @@ app.post('/contact',function(req,res){
                     <p>From : ${fullName}</p>
                     <p>Email: ${email}</p>
                 </h3>
-                <p style="margin : 30px; font-family: 'Overpass', Arial, sans-serif; font-size: 16px; line-height: 1.8px; color: gray; font-weight: 300;">${message}</p>
+                <div style="margin: 30px; font-family: 'Overpass', Arial, sans-serif; font-size: 16px; line-height: 1.8; color: gray; font-weight: 300;">${message}</div>
             </div>`
         },
         (err, info) => {
