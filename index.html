@@ -69,7 +69,7 @@
           
         </a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler display-none"
           type="button"
           data-toggle="collapse"
           data-target="#ftco-nav"
@@ -80,7 +80,7 @@
           <span class="oi oi-menu"></span> Menu
         </button>
 
-        <div class="collapse navbar-collapse" id="ftco-nav">
+        <div class="collapse navbar-collapse visibility-hidden" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
               <a href="index.html" class="nav-link">Home</a>
@@ -983,12 +983,13 @@
           </div>
           <div class="col-md-6 volunteer pl-md-5 ftco-animate">
             <h3 class="mb-3">Be a volunteer</h3>
-            <form action="#" class="volunter-form">
+            <form  class="volunter-form" method="POST" id="volunter-form">
               <div class="form-group">
                 <input
                   type="text"
                   class="form-control"
                   placeholder="Your Name"
+                  name="fullName"
                 />
               </div>
               <div class="form-group">
@@ -996,20 +997,22 @@
                   type="text"
                   class="form-control"
                   placeholder="Your Email"
+                  name="email"
                 />
               </div>
               <div class="form-group">
                 <textarea
-                  name=""
                   id=""
                   cols="30"
                   rows="3"
                   class="form-control"
                   placeholder="Message"
+                  name="message"
                 ></textarea>
               </div>
               <div class="form-group">
                 <input
+                id="sumbit-btn"
                   type="submit"
                   value="Send Message"
                   class="btn btn-white py-3 px-5"
@@ -1204,5 +1207,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
   </body>
 </html>

@@ -1,5 +1,4 @@
 formSubmit =  function() {
-    console.log('clicked')
     submitForm();
 }
 // replace default behaviour for form sumbit
@@ -25,7 +24,7 @@ function contact(data) {
         redirect: "follow", // manual, *follow, error
         referrer: "no-referrer", // no-referrer, *client
         body : JSON.stringify(data)
-    }).then((res) => console.log(res))
+    }).then((res) => res)
 }
 
 (function() {

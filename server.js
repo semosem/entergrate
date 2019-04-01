@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
-const transporter = require('nodemailer');   //require('./utils/transporter');
+const transporter = require('./utils/transporter');
 
 app.use("/js", express.static(__dirname + "/js"));
 app.use("/css", express.static(__dirname + "/css"));
@@ -24,12 +24,16 @@ app.post('/contact',function(req,res){
     const { email, fullName, message } = req.body;
     transporter.sendMail(
         {
-            from : email,
+            from : 'info@entergrate.org',
             to : 'info@entergrate.org',
             subject : `Message from ${fullName}`,
+            replyTo: email,
             html: `<div>
-                <p><h3>From : ${fullName}</h3></p>
-                ${message}
+                <h3>
+                    <p>From : ${fullName}</p>
+                    <p>Email: ${email}</p>
+                </h3>
+                <p style="margin : 30px; font-family: 'Overpass', Arial, sans-serif; font-size: 16px; line-height: 1.8px; color: gray; font-weight: 300;">${message}</p>
             </div>`
         },
         (err, info) => {
